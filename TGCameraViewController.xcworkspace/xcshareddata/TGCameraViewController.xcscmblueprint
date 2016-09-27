@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7F7234CE1AFAE705BD3B94CD86DF8A31ADDFFAFB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F470784617B4DA6F9C9F85392446966FB8DA12D6" : 9223372036854775807,
+    "7F7234CE1AFAE705BD3B94CD86DF8A31ADDFFAFB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B6A1C717-A435-4307-9CED-97499871F4FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F470784617B4DA6F9C9F85392446966FB8DA12D6" : "",
+    "7F7234CE1AFAE705BD3B94CD86DF8A31ADDFFAFB" : "TGCameraViewController\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TGCameraViewController",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TGCameraViewController.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOSJedi\/TGCameraViewController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F7234CE1AFAE705BD3B94CD86DF8A31ADDFFAFB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.heroku.com\/sw-chat-responder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F470784617B4DA6F9C9F85392446966FB8DA12D6"
+    }
+  ]
+}

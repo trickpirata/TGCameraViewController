@@ -28,6 +28,8 @@
 #import "TGCameraSlideView.h"
 #import "TGTintedButton.h"
 
+// JCv -
+#import "Masonry.h"
 
 @interface TGCameraViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -209,7 +211,8 @@
     TGPhotoViewController *viewController = [TGPhotoViewController newWithDelegate:_delegate photo:photo];
     [viewController setAlbumPhoto:YES];
     [self.navigationController pushViewController:viewController animated:NO];
-    
+
+    // JCv - removed because we're just adding the VC view as a subview from now on
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -275,8 +278,28 @@
     
     [self viewWillDisappearWithCompletion:^{
         UIImagePickerController *pickerController = [TGAlbum imagePickerControllerWithDelegate:self];
+
+        // JCv -
         pickerController.popoverPresentationController.sourceView = self.albumButton;
-        [self presentViewController:pickerController animated:YES completion:nil];
+        [self presentViewController:pickerController animated:YES completion:^{
+//            [pickerController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+//                make.top.equalTo(pickerController.view.superview).offset(20);
+//                make.bottom.equalTo(pickerController.view.superview).offset(-20);
+//            }];
+            
+            CGRect frame = pickerController.view.frame;
+            frame.origin.y += 86;
+            frame.size.height -= 106;
+            pickerController.view.frame = frame;
+        }];
+
+//        [self addChildViewController:pickerController];
+//        [_captureView removeGestureRecognizer:_captureView.gestureRecognizers[0]];
+//        [_captureView addSubview:pickerController.view];
+//        
+//        [pickerController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.edges.equalTo(_captureView).sizeOffset(CGSizeMake(0, 20));
+//        }];
     }];
 }
 

@@ -36,7 +36,8 @@
     NSString *mediaType = info[UIImagePickerControllerMediaType];
     
     if ([mediaType isEqualToString:(NSString *) kUTTypeImage]) {
-        return info[UIImagePickerControllerEditedImage];
+//        return info[UIImagePickerControllerEditedImage];
+        return info[UIImagePickerControllerOriginalImage];
     }
     
     return nil;
@@ -54,7 +55,8 @@
     pickerController = [UIImagePickerController new];
     pickerController.delegate = delegate;
     pickerController.mediaTypes = @[(NSString *) kUTTypeImage];
-    pickerController.allowsEditing = YES;
+    // JCv - removed editing (cropping) because it is redundant with our cropping control
+//    pickerController.allowsEditing = YES;
     pickerController.modalPresentationStyle = UIModalPresentationPopover;
     
     return pickerController;

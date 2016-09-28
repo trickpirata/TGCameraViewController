@@ -46,7 +46,7 @@ static UIColor *staticTintColor = nil;
 
 + (UIColor *)tintColor
 {
-    return staticTintColor != nil ? staticTintColor : [self colorWithRed:255 green:91 blue:1];
+    return staticTintColor != nil ? staticTintColor : [UIColor colorWithRed:223/255.0f green:7/255.0f blue:44/255.0f alpha:1.0f]; // [self colorWithRed:255 green:91 blue:1];
 }
 
 + (UIColor *)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue

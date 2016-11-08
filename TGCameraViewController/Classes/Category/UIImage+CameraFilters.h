@@ -30,5 +30,6 @@
 - (UIImage *)curveFilter;
 - (UIImage *)saturateImage:(CGFloat)saturation withContrast:(CGFloat)contrast;
 - (UIImage *)vignetteWithRadius:(CGFloat)radius intensity:(CGFloat)intensity;
+- (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize;
 
 @end

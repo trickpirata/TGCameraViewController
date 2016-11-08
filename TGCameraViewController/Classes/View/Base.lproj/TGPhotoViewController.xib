@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -11,12 +11,15 @@
                 <outlet property="bottomView" destination="Wwe-hD-eWO" id="phi-0I-kq7"/>
                 <outlet property="cancelButton" destination="WAy-eH-OU9" id="KT6-UM-qp5"/>
                 <outlet property="confirmButton" destination="pc5-8R-lAJ" id="q8l-oT-qHT"/>
+                <outlet property="curveFilterButton" destination="evv-qG-miu" id="cgu-cp-1rR"/>
                 <outlet property="defaultFilterButton" destination="9jP-uX-c4U" id="AEq-cV-Ah8"/>
                 <outlet property="filterView" destination="mfq-V7-07J" id="Pf2-0x-IU7"/>
                 <outlet property="filterWandButton" destination="bwi-ED-cl6" id="g4M-yf-0ho"/>
                 <outlet property="photoView" destination="AgS-wg-ici" id="7RM-EQ-xh7"/>
+                <outlet property="satureFilterButton" destination="qQZ-zM-IfK" id="R76-K9-rdv"/>
                 <outlet property="topViewHeight" destination="tVK-li-H3V" id="3hD-FB-P1W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vignetteFilterButton" destination="SfY-Gx-tnh" id="hR2-gf-chI"/>
             </connections>
         </placeholder>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" userLabel="View Controller">
@@ -115,7 +118,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gn-sg-KCX" userLabel="Center View">
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jP-uX-c4U" userLabel="Default">
+                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jP-uX-c4U" userLabel="Default">
                             <frame key="frameInset" minX="31" minY="19" width="70" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="CameraEffectDefault">
@@ -125,7 +128,7 @@
                                 <action selector="defaultFilterTapped:" destination="-1" eventType="touchUpInside" id="kSi-iK-ang"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-zM-IfK" userLabel="Sature">
+                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-zM-IfK" userLabel="Sature">
                             <frame key="frameInset" minX="106" minY="19" width="70" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="CameraEffectSature">
@@ -135,7 +138,7 @@
                                 <action selector="satureFilterTapped:" destination="-1" eventType="touchUpInside" id="uc7-sV-qmz"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evv-qG-miu" userLabel="Curve">
+                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evv-qG-miu" userLabel="Curve">
                             <frame key="frameInset" minX="181" minY="19" width="70" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="CameraEffectCurve">
@@ -145,7 +148,7 @@
                                 <action selector="curveFilterTapped:" destination="-1" eventType="touchUpInside" id="gKy-GF-2ST"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfY-Gx-tnh" userLabel="Vignette">
+                        <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfY-Gx-tnh" userLabel="Vignette">
                             <frame key="frameInset" minX="256" minY="19" width="70" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="CameraEffectVignette">

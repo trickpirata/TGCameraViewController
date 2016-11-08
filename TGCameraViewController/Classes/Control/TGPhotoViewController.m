@@ -43,6 +43,10 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
 @property (strong, nonatomic) IBOutlet UIView *bottomView;
 @property (strong, nonatomic) IBOutlet TGCameraFilterView *filterView;
 @property (strong, nonatomic) IBOutlet UIButton *defaultFilterButton;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *satureFilterButton;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *curveFilterButton;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *vignetteFilterButton;
+
 @property (weak, nonatomic) IBOutlet TGTintedButton *filterWandButton;
 @property (weak, nonatomic) IBOutlet TGTintedButton *cancelButton;
 @property (weak, nonatomic) IBOutlet TGTintedButton *confirmButton;
@@ -106,6 +110,12 @@ static NSString* const kTGCacheVignetteKey = @"TGCacheVignetteKey";
         _filterWandButton.hidden = YES;
     }
     
+    UIImage *photoImage = [_photoView.image imageByScalingProportionallyToSize:CGSizeMake(150, 150)];
+    
+    [_curveFilterButton setImage:[photoImage curveFilter] forState:UIControlStateNormal];
+    [_satureFilterButton setImage:[photoImage saturateImage:1.8 withContrast:1] forState:UIControlStateNormal];
+    [_vignetteFilterButton setImage:[photoImage vignetteWithRadius:0 intensity:6] forState:UIControlStateNormal];
+    [_defaultFilterButton setImage:photoImage  forState:UIControlStateNormal];
     [self addDetailViewToButton:_defaultFilterButton];
 }
 
